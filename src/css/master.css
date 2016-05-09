@@ -10,7 +10,7 @@ body {
 }
 
 .spacer-section {
-	padding: 2rem 0;
+	padding: 3rem 0;
 }
 
 .centered {
@@ -23,23 +23,39 @@ body {
 	padding-bottom: 0px;
 }
 
+footer,
 .main-header {
 	background: url('../images/dojo_bg.jpg') no-repeat center center;
 	background-size: cover;
+	z-index: 10;
+	position:relative;
+}
+
+footer {
+	background-position: center bottom;
+	height: 50px;
 }
 
 .main-header .crest {
 	width: 150px;
 	height: 150px;
-	margin-bottom: -85px;
+	margin-bottom: 0px;
+	padding-top: 2rem;
+	-webkit-transition: all ease 0.9s;
+    transition: all ease 0.9s;
 }
 
 .section-logo {
 	margin-bottom: 0rem;
+
+	-webkit-transition: all ease 1.0s;
+    transition: all ease 1.0s;
 }
 
 .section-heading {
-	margin-top: 7rem;
+	-webkit-transition: all ease 0.8s;
+    transition: all ease 0.8s;
+    padding-bottom: 2rem;
 }
 
 .section-heading,
@@ -47,14 +63,59 @@ body {
   margin-bottom: 1.2rem;
 }
 
+.small-header {
+	position: fixed;
+	left: 0;
+	right: 0;	
+}
+
+.small-header .section-heading {
+	line-height: 0;
+	height: 0;
+	margin: 0;
+	opacity: 0;
+}
+
+.small-header .section-logo{
+	margin: 0;
+	padding: 0;
+}
+
+.navigation .crest {
+	width: 30px;
+	height: 30px;
+	padding-top: 0px;
+	-webkit-transition: all ease 0.8s;
+    transition: all ease 0.8s;
+    opacity: 0;
+}
+
 /* Menu
 -----------------------------------------*/
 
 .navigation {
-	background: rgba(24,0,0, 0);
+	position: absolute;
+	left:0;
+	right: 0;
+	background: rgba(24,0,0, 1);
+	z-index: 9;
+	margin-top: -52px;
+	padding-top: 10px;
 }
+
+.navigation.fixed
+{
+	position: fixed;
+	top: 52px;
+}
+
+.navigation.fixed .crest
+{
+	opacity: 1;
+}
+
 nav {
-	text-align: right;
+	text-align: center;
 }
 nav li {
   margin-bottom: 0;
@@ -92,6 +153,13 @@ nav li:nth-child(2n+1) a:after {
 }
 
 
+span.spacer { 
+  margin-top: -75px;        /* Size of fixed header */
+  padding-bottom: 75px; 
+  display: block; 
+}
+
+
 
 /* MEDIA QUERIES STYLES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -108,7 +176,7 @@ nav li:nth-child(2n+1) a:after {
     border-bottom: 2px solid transparent;
   }
 
-  nav a.current,
+  nav a.nav-active,
   nav a:hover {
   	border-bottom: 2px solid white;
   }
