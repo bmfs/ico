@@ -1,0 +1,122 @@
+body {
+	background: #180000;
+	color: #aaa;
+}
+/* Sections 
+----------------------------------------*/
+
+.section {
+	padding: 0rem 0 7rem;
+}
+
+.spacer-section {
+	padding: 2rem 0;
+}
+
+.centered {
+	text-align: center;
+}
+
+/* Main Header
+---------------------------------------*/
+.section.main-header {
+	padding-bottom: 0px;
+}
+
+.main-header {
+	background: url('../images/dojo_bg.jpg') no-repeat center center;
+	background-size: cover;
+}
+
+.main-header .crest {
+	width: 150px;
+	height: 150px;
+	margin-bottom: -85px;
+}
+
+.section-logo {
+	margin-bottom: 0rem;
+}
+
+.section-heading {
+	margin-top: 7rem;
+}
+
+.section-heading,
+.section-description {
+  margin-bottom: 1.2rem;
+}
+
+/* Menu
+-----------------------------------------*/
+
+.navigation {
+	background: rgba(24,0,0, 0);
+}
+nav {
+	text-align: right;
+}
+nav li {
+  margin-bottom: 0;
+  display: inline-block;
+}
+
+nav ul {
+	margin:0;
+}
+nav li {
+  width: 50%;
+}
+
+nav a {
+  position: relative;
+  width: 100%;
+  margin: 10px 0 4px 0;
+  color: #fdfdfd;
+  text-transform: capitalize;
+}
+
+nav a:hover{
+	color: white;
+}
+
+nav li:nth-child(2n+1) a:after {
+  position: absolute;
+  content: '';
+  top: 19.5px;
+  right: -2.5px;
+  z-index: 10;
+  border-radius: 100%;
+  width: 5px;
+  height: 5px;
+}
+
+
+
+/* MEDIA QUERIES STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+@media (min-width: 550px) {
+
+  nav li {
+    width: auto;
+  }
+
+
+  nav a {
+    width: 80px;
+    border-bottom: 2px solid transparent;
+  }
+
+  nav a.current,
+  nav a:hover {
+  	border-bottom: 2px solid white;
+  }
+
+  nav li:nth-child(2n+1) a:after {
+    content: none;
+  }
+
+
+}
+

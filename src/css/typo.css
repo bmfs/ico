@@ -1,0 +1,33 @@
+
+h1,h2,h3,h4 {
+	color: #fdfdfd;
+}
+
+a {
+  text-align: center;
+  outline: none;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 14px;
+  color: steelblue;
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
+  -webkit-transition: all ease .3s;
+          transition: all ease .3s;
+}
+
+nav a {
+	font-size: 16px;
+}
+
+/* Main Header
+---------------------------------------*/
+
+.section-heading,
+.section-description {
+  color: #fdfdfd;
+}
+
+
+.section-heading {
+	font-weight: bold;
+}
