@@ -2,6 +2,24 @@ body {
 	background: #180000;
 	color: #aaa;
 }
+
+.dark {
+	background: #1D1313 !important;
+}
+.dark_nav {
+	background: #2E2424 !important;	
+	-webkit-transition: all ease 0.2s;
+    transition: all ease 0.2s;
+}
+
+.title,h1,h2,h3 {
+	font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+p,li {
+	font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;	
+}
+
 /* Sections 
 ----------------------------------------*/
 
@@ -17,14 +35,17 @@ body {
 	text-align: center;
 }
 
+.align-left {
+	text-align: left;
+}
 /* Main Header
 ---------------------------------------*/
 .section.main-header {
 	padding-bottom: 0px;
 }
 
-footer,
-.main-header {
+footer.with-bg,
+.main-header.with-bg {
 	background: url('../images/dojo_bg.jpg') no-repeat center center;
 	background-size: cover;
 	z-index: 10;
@@ -90,6 +111,29 @@ footer {
     opacity: 0;
 }
 
+.fb_crest {
+	width: 160px;
+	height: 160px;
+	border-radius: 80px;
+
+	-webkit-transition: all ease 0.8s;
+    transition: all ease 0.8s;
+    opacity: 0.5;
+}
+
+.fb_crest:hover
+{
+	-webkit-transition: all ease 0.8s;
+    transition: all ease 0.8s;
+    opacity: 1;
+
+}
+
+span.reverse {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+
 /* Menu
 -----------------------------------------*/
 
@@ -97,7 +141,7 @@ footer {
 	position: absolute;
 	left:0;
 	right: 0;
-	background: rgba(24,0,0, 1);
+	/*background: rgba(24,0,0, 1);*/
 	z-index: 9;
 	margin-top: -52px;
 	padding-top: 10px;

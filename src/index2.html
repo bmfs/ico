@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Iaido Clube de Oeiras</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<link href='https://fonts.googleapis.com/css?family=Montserrat:700,400' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/master.css" >
+  <link rel="stylesheet" href="css/typo.css" >
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body class="dark">
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+   <div class="section title">
+    <span class="spacer"> &nbsp;</span>
+    <div class="centered">
+      <h2 >Iaido Clube de Oeiras</h3>
+    </div>
+  </div>
+
+  <div class="navigation">
+    <div class="container">
+      <div class="row">
+        <div class="twelve columns">
+          <nav>
+            <ul>
+              <li><a href="#horario">Horário</a></li>
+              <li><a href="#morada">Morada</a></li>
+              <li><a href="#contactos">Contactos</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="horario" class="section centered">
+    <span class="spacer"> &nbsp;</span>
+    <div class="container">
+      <div class="row">
+            <h4>Horario</h4>
+            <ul>
+              <li>Terças  - 21:00 - 22:00</li>
+              <li>Quintas - 21:00 - 22:00</li>
+            </ul>
+      </div>
+      </div>
+  </div>
+
+  <div id="morada" class="section centered">
+  <div class="container">
+      <h4>Morada</h4>
+      <div class="row">
+        <p>
+          Escola Secundária Luís de Freitas Branco<br/>Paço de Arcos<br/><br/>
+          <b>Nota</b>: Entrada pela <i>Avenida Elvira Velez</i>
+        </p>
+      </div>
+
+      <div class="row">
+          <div class="span8">
+            <iframe width="100%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2999.0826975748446!2d-9.298802880603583!3d38.69885094400234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzjCsDQxJzUzLjkiTiA5wrAxNyc0OC44Ilc!5e0!3m2!1sen!2spt!4v1465251407630"></iframe>
+          </div>
+    </div>
+  </div>
+  </div>
+
+  <span class="spacer"> &nbsp;</span>
+
+  <div id="contactos" class="section centered">
+  <span class="spacer"> &nbsp;</span>
+    <div class="container">
+        <h3>Contactos</h3>
+
+        
+        <div class="row">
+          <!--<div class="one-half column">-->
+          <ul>
+            <li><i>Email:</i>
+            <span class="email_geral"></span>
+            <noscript>
+            <em>Ative o javascript para ver o email.</em>
+            </noscript>
+            </li>
+          </ul>
+
+          <!--</div>-->
+
+          <!--<div class="one-half column">-->
+            <p>Segue-nos no facebook</p>
+            <a href="https://www.facebook.com/iaido.oeiras/">
+              <img src="images/fb_crest.png" class="fb_crest" />
+            </a>
+          <!--</div>-->
+        </div>
+    </div>
+  </div>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<script src="js/zepto.min.js"></script>
+<script type="text/javascript">
+  function handleScroll(){
+
+  // check that this is a relatively modern browser
+  if (window.XMLHttpRequest){
+
+    // determine the distance scrolled down the page
+    var offset = window.pageYOffset
+               ? window.pageYOffset
+               : document.documentElement.scrollTop;
+
+    // set the appropriate class on the navigation
+    var logo = $(".main-header");
+    var navigation = $(".navigation");
+
+    if (offset > 113) {
+      navigation.addClass('fixed');
+      navigation.addClass('dark_nav');
+    } else {
+      navigation.removeClass('fixed');
+      navigation.removeClass('dark_nav');
+    }
+
+  }
+
+}
+
+function gen_mail_to_link(lhs,rhs,subject) {
+        var res = "<a href=\"mailto";
+        res += ":" + lhs + "@";
+        res += rhs + "?subject=" + subject + "\">" + lhs + "@" + rhs + "<\/a>";
+        return res;
+    }
+
+Zepto(function($){
+// add the scroll event listener
+if (window.addEventListener){
+  window.addEventListener('scroll', handleScroll, false);
+}else{
+  window.attachEvent('onscroll', handleScroll);
+}
+    $(".email_geral").html(gen_mail_to_link("geral", "ico.pt", ""));
+/**
+     * This part handles the highlighting functionality.
+     * We use the scroll functionality again, some array creation and 
+     * manipulation, class adding and class removing, and conditional testing
+     */
+    var aChildren = $("nav li").children(); // find the a children of the list items
+    var aArray = []; // create the empty aArray
+    for (var i=0; i < aChildren.length; i++) {    
+        var aChild = aChildren[i];
+        var ahref = $(aChild).attr('href');
+        aArray.push(ahref);
+    } // this for loop fills the aArray with attribute href values
+
+    $(window).scroll(function(){
+        var windowPos = $(window).scrollTop(); // get the offset of the window from the top of page
+        var windowHeight = $(window).height(); // get the height of the window
+        var docHeight = $(document).height();
+
+        for (var i=0; i < aArray.length; i++) {
+            var theID = aArray[i];
+            var divPos = $(theID).offset().top; // get the offset of the div from the top of page
+            var divHeight = $(theID).height(); // get the height of the div in question
+            if (windowPos >= divPos && windowPos < (divPos + divHeight)) {
+                $("a[href='" + theID + "']").addClass("nav-active");
+            } else {
+                $("a[href='" + theID + "']").removeClass("nav-active");
+            }
+        }
+
+        if(windowPos + windowHeight == docHeight) {
+            if (!$("nav li:last-child a").hasClass("nav-active")) {
+                var navActiveCurrent = $(".nav-active").attr("href");
+                $("a[href='" + navActiveCurrent + "']").removeClass("nav-active");
+                $("nav li:last-child a").addClass("nav-active");
+            }
+        }
+    });
+
+})
+</script>
+</body>
+</html>
