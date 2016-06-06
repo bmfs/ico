@@ -4,10 +4,10 @@ body {
 }
 
 .dark {
-	background: #1D1313 !important;
+	background: #1D1313 url('../images/japanese-pattern.png') repeat center center !important;
 }
 .dark_nav {
-	background: #2E2424 !important;	
+	background: #1D1313 !important;	
 	-webkit-transition: all ease 0.2s;
     transition: all ease 0.2s;
 }
@@ -48,6 +48,12 @@ footer.with-bg,
 .main-header.with-bg {
 	background: url('../images/dojo_bg.jpg') no-repeat center center;
 	background-size: cover;
+	z-index: 10;
+	position:relative;
+}
+
+footer.bg2 {
+	background: url('../images/japanese-pattern.png') repeat-x center center;
 	z-index: 10;
 	position:relative;
 }
