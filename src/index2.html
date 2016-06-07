@@ -62,7 +62,7 @@
     <span class="spacer"> &nbsp;</span>
     <div class="container">
       <div class="row">
-            <h4>Horario</h4>
+            <h4>Horário</h4>
             <ul>
               <li>Terças  - 21:00 - 22:00</li>
               <li>Quintas - 21:00 - 22:00</li>
@@ -72,12 +72,14 @@
   </div>
 
   <div id="morada" class="section centered">
+  <span class="spacer"> &nbsp;</span>
   <div class="container">
       <h4>Morada</h4>
       <div class="row">
         <p>
-          Escola Secundária Luís de Freitas Branco<br/>Paço de Arcos<br/><br/>
-          <b>Nota</b>: Entrada pela <i>Avenida Elvira Velez</i>
+          Pavilhão Jesus Correia<br/>
+          Rua Elvira Velez<br/>
+          Paço de Arcos
         </p>
       </div>
 
@@ -88,8 +90,6 @@
     </div>
   </div>
   </div>
-
-  <span class="spacer"> &nbsp;</span>
 
   <div id="contactos" class="section centered">
   <span class="spacer"> &nbsp;</span>
@@ -187,7 +187,7 @@ if (window.addEventListener){
 
         for (var i=0; i < aArray.length; i++) {
             var theID = aArray[i];
-            var divPos = $(theID).offset().top; // get the offset of the div from the top of page
+            var divPos = $(theID).offset().top - 100; // get the offset of the div from the top of page
             var divHeight = $(theID).height(); // get the height of the div in question
             if (windowPos >= divPos && windowPos < (divPos + divHeight)) {
                 $("a[href='" + theID + "']").addClass("nav-active");
